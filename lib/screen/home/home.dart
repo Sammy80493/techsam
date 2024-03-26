@@ -1,14 +1,14 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:sammyajax/helper/firebase_store_helper.dart';
-import 'package:sammyajax/model/category_model.dart';
-import 'package:sammyajax/model/product_model.dart';
-import 'package:sammyajax/util/constants.dart';
-import 'package:sammyajax/widget/best_product_widget.dart';
-import 'package:sammyajax/widget/category_widget.dart';
-import 'package:sammyajax/widget/searchbar_widget.dart';
-import 'package:sammyajax/widget/text_widget.dart';
+import 'package:techsam/helper/firebase_store_helper.dart';
+import 'package:techsam/model/category_model.dart';
+import 'package:techsam/model/product_model.dart';
+import 'package:techsam/util/constants.dart';
+import 'package:techsam/widget/best_product_widget.dart';
+import 'package:techsam/widget/category_widget.dart';
+import 'package:techsam/widget/searchbar_widget.dart';
+import 'package:techsam/widget/text_widget.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

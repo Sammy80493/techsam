@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sammyajax/util/constants.dart';
+import 'package:techsam/util/constants.dart';
+
 
 ThemeData light_theme = ThemeData(
   appBarTheme: const AppBarTheme(iconTheme: IconThemeData(color: Colors.black)),

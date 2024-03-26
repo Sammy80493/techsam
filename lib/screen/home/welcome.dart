@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sammyajax/screen/auth/login/login_widget.dart';
-import 'package:sammyajax/screen/auth/sign_up/signup_widget.dart';
-import 'package:sammyajax/util/constants.dart';
-import 'package:sammyajax/util/route.dart';
-import 'package:sammyajax/widget/btn_widget.dart';
-import 'package:sammyajax/widget/text_widget.dart';
+import 'package:techsam/screen/auth/login/login_widget.dart';
+import 'package:techsam/screen/auth/sign_up/signup_widget.dart';
+import 'package:techsam/util/constants.dart';
+import 'package:techsam/util/route.dart';
+import 'package:techsam/widget/btn_widget.dart';
+import 'package:techsam/widget/text_widget.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});

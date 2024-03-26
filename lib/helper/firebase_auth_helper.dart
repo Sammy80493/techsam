@@ -2,8 +2,8 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:sammyajax/util/constants.dart';
-import 'package:sammyajax/util/route.dart';
+import 'package:techsam/util/constants.dart';
+import 'package:techsam/util/route.dart';
 import 'package:toastification/toastification.dart';
 
 class FirebaseAuthOps {

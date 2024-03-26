@@ -2,8 +2,9 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:sammyajax/model/category_model.dart';
-import 'package:sammyajax/util/constants.dart';
+import 'package:techsam/model/category_model.dart';
+import 'package:techsam/util/constants.dart';
+
 
 class categorie_item extends StatelessWidget {
   List<Categories> getCategoryList;

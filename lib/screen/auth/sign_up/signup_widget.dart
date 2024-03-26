@@ -2,15 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sammyajax/helper/firebase_auth_helper.dart';
-import 'package:sammyajax/provider/validation_provider.dart';
-import 'package:sammyajax/screen/auth/login/login_widget.dart';
-import 'package:sammyajax/screen/home/home.dart';
-import 'package:sammyajax/util/constants.dart';
-import 'package:sammyajax/util/route.dart';
-import 'package:sammyajax/widget/btn_widget.dart';
-import 'package:sammyajax/widget/input_widget.dart';
-import 'package:sammyajax/widget/text_widget.dart';
+import 'package:techsam/helper/firebase_auth_helper.dart';
+import 'package:techsam/provider/validation_provider.dart';
+import 'package:techsam/screen/auth/login/login_widget.dart';
+import 'package:techsam/screen/home/home.dart';
+import 'package:techsam/util/constants.dart';
+import 'package:techsam/util/route.dart';
+import 'package:techsam/widget/btn_widget.dart';
+import 'package:techsam/widget/input_widget.dart';
+import 'package:techsam/widget/text_widget.dart';
 import 'package:toastification/toastification.dart';
 
 class SignupWidget extends StatefulWidget {

@@ -2,9 +2,9 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:sammyajax/model/category_model.dart';
-import 'package:sammyajax/model/product_model.dart';
-import 'package:sammyajax/util/constants.dart';
+import 'package:techsam/model/category_model.dart';
+import 'package:techsam/model/product_model.dart';
+import 'package:techsam/util/constants.dart';
 import 'package:toastification/toastification.dart';
 
 class FirebaseStoreHelper {

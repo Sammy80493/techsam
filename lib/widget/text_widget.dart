@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sammyajax/util/constants.dart';
+import 'package:techsam/util/constants.dart';
+
 
 class TextWidget extends StatelessWidget {
   final String txt;

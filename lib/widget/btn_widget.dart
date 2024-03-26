@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sammyajax/widget/text_widget.dart';
+import 'package:techsam/widget/text_widget.dart';
+
 
 class BtnWidget extends StatelessWidget {
   final String btnTitle;

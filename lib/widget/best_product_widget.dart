@@ -2,10 +2,11 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:sammyajax/model/product_model.dart';
-import 'package:sammyajax/util/constants.dart';
-import 'package:sammyajax/widget/outline_btn_widget.dart';
-import 'package:sammyajax/widget/text_widget.dart';
+import 'package:techsam/model/product_model.dart';
+import 'package:techsam/util/constants.dart';
+import 'package:techsam/widget/outline_btn_widget.dart';
+import 'package:techsam/widget/text_widget.dart';
+
 
 class best_product extends StatelessWidget {
   const best_product({

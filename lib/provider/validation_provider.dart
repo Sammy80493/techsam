@@ -1,7 +1,7 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:regexpattern/regexpattern.dart';
-import 'package:sammyajax/util/constants.dart';
+import 'package:techsam/util/constants.dart';
 import 'package:toastification/toastification.dart';
 
 class Validations extends ChangeNotifier {

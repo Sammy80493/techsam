@@ -2,13 +2,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:sammyajax/helper/firebase_auth_helper.dart';
-import 'package:sammyajax/helper/firebase_options.dart';
-import 'package:sammyajax/provider/shop_provider.dart';
-import 'package:sammyajax/provider/validation_provider.dart';
-import 'package:sammyajax/screen/home/home.dart';
-import 'package:sammyajax/screen/home/welcome.dart';
-import 'package:sammyajax/theme/light_theme.dart';
+import 'package:techsam/helper/firebase_auth_helper.dart';
+import 'package:techsam/helper/firebase_options.dart';
+import 'package:techsam/provider/shop_provider.dart';
+import 'package:techsam/provider/validation_provider.dart';
+import 'package:techsam/screen/home/home.dart';
+import 'package:techsam/screen/home/welcome.dart';
+import 'package:techsam/theme/light_theme.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

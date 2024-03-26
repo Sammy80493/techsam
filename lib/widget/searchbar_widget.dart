@@ -1,7 +1,8 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:sammyajax/util/constants.dart';
+import 'package:techsam/util/constants.dart';
+
 
 class searchbar_widget extends StatelessWidget {
   const searchbar_widget({
