@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "303034569293",
+    "project_id": "techsam-63ac4",
+    "storage_bucket": "techsam-63ac4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303034569293:android:89db65bf91661c68fb0204",
+        "android_client_info": {
+          "package_name": "com.example.techsam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqcNc_2d3SMk33iRTytBoZm_Qp0Az0t4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
