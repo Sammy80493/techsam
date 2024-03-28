@@ -62,29 +62,29 @@ class _HomeState extends State<Home> {
             ? Center(
                 child: Constants.showLoader(size: 20),
               )
-            : SingleChildScrollView(
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    // mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      const TextWidget(
-                        txt: 'SamTex Accessories',
-                        fontWeight: FontWeight.bold,
-                        fontsize: 25,
-                      ),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                      searchbar_widget(
-                          searchController: searchController,
-                          textScaler: textScaler),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                      Column(
+            : Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  // mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const TextWidget(
+                      txt: 'SamTex Accessories',
+                      fontWeight: FontWeight.bold,
+                      fontsize: 25,
+                    ),
+                    SizedBox(
+                      height: height * 0.02,
+                    ),
+                    searchbar_widget(
+                        searchController: searchController,
+                        textScaler: textScaler),
+                    SizedBox(
+                      height: height * 0.02,
+                    ),
+                    Expanded(
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           const TextWidget(
@@ -116,9 +116,7 @@ class _HomeState extends State<Home> {
                             height: height * 0.01,
                           ),
                           //For Products
-                          SizedBox(
-                            height: height,
-                            width: width,
+                          Expanded(
                             child: getProductList.isEmpty
                                 ? SizedBox(
                                     width: width,
@@ -128,9 +126,9 @@ class _HomeState extends State<Home> {
                                 : best_product(getProductList: getProductList),
                           ),
                         ],
-                      )
-                    ],
-                  ),
+                      ),
+                    )
+                  ],
                 ),
               ),
       ),
