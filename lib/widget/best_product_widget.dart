@@ -1,12 +1,9 @@
 // ignore_for_file: camel_case_types
 
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:techsam/model/product_model.dart';
-import 'package:techsam/util/constants.dart';
 import 'package:techsam/widget/outline_btn_widget.dart';
 import 'package:techsam/widget/text_widget.dart';
-
 
 class best_product extends StatelessWidget {
   const best_product({
@@ -27,6 +24,7 @@ class best_product extends StatelessWidget {
       ),
       itemCount: getProductList.length,
       itemBuilder: (BuildContext context, int index) {
+        print(getProductList[index].imgPath);
         return Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
@@ -39,13 +37,7 @@ class best_product extends StatelessWidget {
             children: <Widget>[
               AspectRatio(
                 aspectRatio: 7 / 6,
-                child: CachedNetworkImage(
-                  imageUrl: getProductList[index].imgPath,
-                  errorWidget: (context, url, error) => Center(
-                    child: Constants.showLoader(size: 20),
-                  ),
-                  placeholder: (context, url) => Constants.showLoader(size: 20),
-                ),
+                child: Image.network(getProductList[index].imgPath),
               ),
               TextWidget(
                 textAlign: TextAlign.center,

@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
   }
 
 //Logic for fetching of category item
-  void getCategory() async {
+  getCategory() async {
     setState(() {
       isLoading = true;
     });

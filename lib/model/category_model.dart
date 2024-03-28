@@ -2,16 +2,20 @@ import 'dart:convert';
 
 class Categories {
   final String imgPath;
+  final String name;
 
   Categories({
     this.imgPath = '',
+    this.name = '',
   });
 
   Categories copyWith({
     String? imgPath,
+    String? name,
   }) {
     return Categories(
       imgPath: imgPath ?? this.imgPath,
+      name: name ?? this.name,
     );
   }
 
@@ -19,6 +23,7 @@ class Categories {
     final result = <String, dynamic>{};
 
     result.addAll({'imgPath': imgPath});
+    result.addAll({'name': name});
 
     return result;
   }
@@ -26,6 +31,7 @@ class Categories {
   factory Categories.fromMap(Map<String, dynamic> map) {
     return Categories(
       imgPath: map['imgPath'] ?? '',
+      name: map['name'] ?? '',
     );
   }
 
@@ -35,17 +41,19 @@ class Categories {
       Categories.fromMap(json.decode(source));
 
   @override
-  String toString() => 'Categories(imgPath: $imgPath)';
+  String toString() => 'Categories(imgPath: $imgPath, name: $name)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is Categories && other.imgPath == imgPath;
+    return other is Categories &&
+        other.imgPath == imgPath &&
+        other.name == name;
   }
 
   @override
-  int get hashCode => imgPath.hashCode;
+  int get hashCode => imgPath.hashCode ^ name.hashCode;
 }
 
 // List<Categories> categoriesItem = [

@@ -1,10 +1,7 @@
 // ignore_for_file: camel_case_types, must_be_immutable
 
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:techsam/model/category_model.dart';
-import 'package:techsam/util/constants.dart';
-
 
 class categorie_item extends StatelessWidget {
   List<Categories> getCategoryList;
@@ -21,6 +18,7 @@ class categorie_item extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemCount: getCategoryList.length,
       itemBuilder: (BuildContext context, int index) {
+        print(getCategoryList[index].imgPath);
         return GestureDetector(
           onTap: onTap,
           child: Card.filled(
@@ -32,18 +30,8 @@ class categorie_item extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: AspectRatio(
-                aspectRatio: 1.4,
-                child: CachedNetworkImage(
-                  imageUrl: getCategoryList[index].imgPath,
-                  placeholder: (context, url) => Constants.showLoader(size: 20),
-                  filterQuality: FilterQuality.high,
-                  fadeInCurve: Curves.easeInBack,
-                  errorWidget: (context, url, error) => Center(
-                    child: Constants.showLoader(size: 20),
-                  ),
-                  fadeOutCurve: Curves.easeInQuart,
-                ),
-              ),
+                  aspectRatio: 1.4,
+                  child: Image.network(getCategoryList[index].imgPath)),
             ),
           ),
         );
