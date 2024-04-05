@@ -14,7 +14,8 @@ class Constants {
   static const logo = 'lib/assets/images/5.png';
 
   //Default app color
-  static Color generalBg = const Color.fromARGB(255, 226, 20, 20);
+  static const Color generalBg = Color.fromARGB(255, 226, 20, 20);
+  static const Color white = Colors.white;
   //Shop name
   static const shopName = 'DoshTex';
 

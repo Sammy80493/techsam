@@ -1,9 +1,14 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:techsam/util/constants.dart';
 
-
 ThemeData light_theme = ThemeData(
-  appBarTheme: const AppBarTheme(iconTheme: IconThemeData(color: Colors.black)),
+  appBarTheme: const AppBarTheme(
+    iconTheme: IconThemeData(color: Colors.black),
+    elevation: 0,
+    scrolledUnderElevation: 0,
+  ),
   brightness: Brightness.light,
   platform: TargetPlatform.android,
   outlinedButtonTheme: OutlinedButtonThemeData(

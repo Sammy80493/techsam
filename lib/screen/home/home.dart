@@ -101,8 +101,7 @@ class _HomeState extends State<Home> {
                             child: getCategoryItem.isEmpty
                                 ? Constants.showLoader(size: 20)
                                 : categorie_item(
-                                    getCategoryList: getCategoryItem,
-                                  ),
+                                    getCategoryItem: getCategoryItem),
                           ),
                           SizedBox(
                             height: height * 0.02,
@@ -123,7 +122,7 @@ class _HomeState extends State<Home> {
                                     height: height * 0.5,
                                     child: Constants.showLoader(size: 20),
                                   )
-                                : best_product(getProductList: getProductList),
+                                : Best_product(getProductList: getProductList),
                           ),
                         ],
                       ),

@@ -19,9 +19,6 @@ class FirebaseStoreHelper {
       //instance of QuerySnapshot
       QuerySnapshot<Map<String, dynamic>> querySnapshot =
           await firebaseFirestore.collection('categories').get();
-      // for (var element in querySnapshot.docs) {
-      //   print(element.data());
-      // }
       List<Categories> categorieItem =
           querySnapshot.docs.map((e) => Categories.fromMap(e.data())).toList();
 
@@ -39,9 +36,26 @@ class FirebaseStoreHelper {
       //instance of QuerySnapshot
       QuerySnapshot<Map<String, dynamic>> querySnapshot =
           await firebaseFirestore.collectionGroup('products').get();
-      // for (var element in querySnapshot.docs) {
-      //   print(element.data());
-      // }
+      List<Products> productsItems =
+          querySnapshot.docs.map((e) => Products.fromMap(e.data())).toList();
+      return productsItems;
+    } catch (e) {
+      Constants.alertMsg(
+          context, 'Error', e.toString(), ToastificationType.error);
+      return [];
+    }
+  }
+
+  Future<List<Products>> getCategoryListDetails(
+      BuildContext context, String id) async {
+    try {
+      //instance of QuerySnapshot
+      QuerySnapshot<Map<String, dynamic>> querySnapshot =
+          await firebaseFirestore
+              .collection('categories')
+              .doc(id)
+              .collection('products')
+              .get();
       List<Products> productsItems =
           querySnapshot.docs.map((e) => Products.fromMap(e.data())).toList();
       return productsItems;

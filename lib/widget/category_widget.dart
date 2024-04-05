@@ -1,26 +1,29 @@
-// ignore_for_file: camel_case_types, must_be_immutable
+// ignore_for_file: camel_case_types
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:techsam/model/category_model.dart';
+import 'package:techsam/screen/home/category_item_detail.dart';
+import 'package:techsam/util/constants.dart';
+import 'package:techsam/util/route.dart';
 
 class categorie_item extends StatelessWidget {
-  List<Categories> getCategoryList;
-  final Function()? onTap;
-  categorie_item({
+  const categorie_item({
     super.key,
-    required this.getCategoryList,
-    this.onTap,
+    required this.getCategoryItem,
   });
+
+  final List<Categories> getCategoryItem;
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: getCategoryList.length,
+      itemCount: getCategoryItem.length,
       itemBuilder: (BuildContext context, int index) {
-        print(getCategoryList[index].imgPath);
         return GestureDetector(
-          onTap: onTap,
+          onTap: () => Routes.push(
+              CategoryItemDetail(categories: getCategoryItem[index]), context),
           child: Card.filled(
             elevation: 4,
             shape: RoundedRectangleBorder(
@@ -30,8 +33,18 @@ class categorie_item extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: AspectRatio(
-                  aspectRatio: 1.4,
-                  child: Image.network(getCategoryList[index].imgPath)),
+                aspectRatio: 1.4,
+                child: CachedNetworkImage(
+                  imageUrl: getCategoryItem[index].image,
+                  placeholder: (context, url) => Constants.showLoader(size: 20),
+                  filterQuality: FilterQuality.high,
+                  fadeInCurve: Curves.easeInBack,
+                  errorWidget: (context, url, error) => Center(
+                    child: Constants.showLoader(size: 20),
+                  ),
+                  fadeOutCurve: Curves.easeInQuart,
+                ),
+              ),
             ),
           ),
         );

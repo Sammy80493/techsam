@@ -4,12 +4,11 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:techsam/helper/firebase_auth_helper.dart';
 import 'package:techsam/helper/firebase_options.dart';
-import 'package:techsam/provider/shop_provider.dart';
+import 'package:techsam/provider/app_provider.dart';
 import 'package:techsam/provider/validation_provider.dart';
 import 'package:techsam/screen/home/home.dart';
 import 'package:techsam/screen/home/welcome.dart';
 import 'package:techsam/theme/light_theme.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,6 +41,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: light_theme,
       darkTheme: light_theme,
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       home: StreamBuilder(
         stream: FirebaseAuthOps.firebaseAuthOps.getAuthState,
